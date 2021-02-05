@@ -10,7 +10,7 @@ import Combine
 
 class ContentViewModel: ObservableObject {
     @Published var scrapeBiteSize: String = "10"
-    @Published var products: [Product] = []
+    @Published var products: [ScrappedProduct] = []
     @Published var categories: [String] = [""]
     
     @Published var currentCategory: String = ""
@@ -42,7 +42,7 @@ class ContentViewModel: ObservableObject {
         }
     }
     
-    func extractCategories(from products: [Product]) {
+    func extractCategories(from products: [ScrappedProduct]) {
         categories = Array(Set(ProductUtilities.availableCategories(from: products)).union(Set(categories))).sorted(by: <)
     }
     

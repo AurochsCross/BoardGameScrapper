@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
+    @State var showUnavailable = true
+    @State var showOnlyDiscount = false
     
     var body: some View {
         HStack {
@@ -30,11 +32,16 @@ struct ContentView: View {
             .padding()
             Divider()
             VStack {
-                Picker("Category", selection: $viewModel.currentCategory, content: {
-                    ForEach(viewModel.categories, id: \.self) {
-                        Text($0)
-                    }
-                })
+                HStack {
+                    Picker("Category", selection: $viewModel.currentCategory, content: {
+                        ForEach(viewModel.categories, id: \.self) {
+                            Text($0)
+                        }
+                    })
+                    
+                    Toggle("Show unavailable", isOn: $showUnavailable)
+                    Toggle("Show discount only", isOn: $showOnlyDiscount)
+                }
                 Divider()
                 NavigationView {
                     List {
@@ -55,16 +62,26 @@ struct ContentView: View {
         .frame(minWidth: 300, minHeight: 200)
     }
     
-    var products: [Product] {
-        if viewModel.currentCategory.isEmpty {
-            return viewModel.products
+    var products: [ScrappedProduct] {
+        var result = viewModel.products
+        
+        if !viewModel.currentCategory.isEmpty {
+            result = result.filter { $0.categories.contains(viewModel.currentCategory) }
         }
         
-        return viewModel.products.filter { $0.categories.contains(viewModel.currentCategory) }
+        if !showUnavailable {
+            result = result.filter { $0.availability == .available }
+        }
+        
+        if showOnlyDiscount {
+            result = result.filter { $0.isDiscounted }
+        }
+        
+        return result
     }
     
     struct ProductRow: View {
-        let product: Product
+        let product: ScrappedProduct
         var body: some View {
             HStack(spacing: 8) {
                 Text(product.name)
@@ -86,7 +103,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let viewModel = ContentViewModel()
         
-        viewModel.products = [Product(name: "Test name", price: 20, originalPrice: nil, categories: [], availability: .available)]
+        viewModel.products = [.mock]
         
         let view = ContentView(viewModel: viewModel)
         

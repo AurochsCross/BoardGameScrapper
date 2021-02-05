@@ -13,17 +13,23 @@ class Scrapper {
     let biteSize: Int
     var currentIteration = 1
     
-    let chunkScrapped = PassthroughSubject<[Product], Never>()
+    let chunkScrapped = PassthroughSubject<[ScrappedProduct], Never>()
     
     private var shouldScrape = false
+    private var limit: Int?
     
-    init(biteSize: Int) {
-        self.biteSize = biteSize
+    var name: String {
+        "NaN"
     }
     
-    func scrape() -> [Product] {
+    init(biteSize: Int, limit: Int? = nil) {
+        self.biteSize = biteSize
+        self.limit = limit
+    }
+    
+    func scrape() -> [ScrappedProduct] {
         shouldScrape = true
-        var result: [Product] = []
+        var result: [ScrappedProduct] = []
         
         while (true) {
             let products = scrapeCurrentIteration()
@@ -32,10 +38,13 @@ class Scrapper {
                 result.append(contentsOf: products)
                 
                 chunkScrapped.send(products)
-                
                 nextIteration()
             } else {
                 break
+            }
+            
+            if let limit = limit, result.count >= limit {
+                stop()
             }
             
             if !shouldScrape { break }
@@ -49,7 +58,7 @@ class Scrapper {
         shouldScrape = false
     }
     
-    private func scrapeCurrentIteration() -> [Product] {
+    private func scrapeCurrentIteration() -> [ScrappedProduct] {
         let url = currentIterationRequestUrl()
         
         guard let content = try? String(contentsOf: URL(string: url)!) else {
@@ -63,7 +72,7 @@ class Scrapper {
         return extractProducts(from: doc)
     }
     
-    func extractProducts(from document: Element) -> [Product] {
+    func extractProducts(from document: Element) -> [ScrappedProduct] {
         fatalError("extractProducts(from:) not implemented")
     }
     

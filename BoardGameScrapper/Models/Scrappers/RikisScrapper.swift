@@ -1,31 +1,31 @@
 //
-//  StaloZaidimaiScrapper.swift
+//  RikisScrapper.swift
 //  BoardGameScrapper
 //
-//  Created by Petras Malinauskas on 2021-02-03.
+//  Created by Petras Malinauskas on 2021-02-04.
 //
 
 import Foundation
 import SwiftSoup
 
-class StaloZaidimaiScapper: Scrapper {
-    private enum Configs { static let storeId = "stalozaidimai-eu" }
+class RikisScrapper: Scrapper {
+    private enum Configs { static let storeId = "rikis" }
     
     override var name: String {
-        "Stalozaidimai.eu"
+        "Rikis.lt"
     }
     
     override func currentIterationRequestUrl() -> String {
-        return "https://stalozaidimai.eu/shop/page/\(currentIteration)/?per_page=\(biteSize)"
+        return "https://www.rikis.lt/parduotuve/page/\(currentIteration)/?product_count=\(biteSize)"
     }
     
     override func extractProducts(from document: Element) -> [ScrappedProduct] {
-        guard let productsParent = try? document.select("div.products").first() else {
+        guard let productsParent = try? document.select("ul.products").first() else {
             print("Failed to get products parent node")
             return []
         }
         
-        guard let productsDom = try? productsParent.select("div.product-info") else {
+        guard let productsDom = try? productsParent.select("div.fusion-product-wrapper") else {
             fatalError("Failed to get products nodes")
         }
         
@@ -48,9 +48,9 @@ class StaloZaidimaiScapper: Scrapper {
             originalPrice = priceStringToDouble(originalPriceString)
         }
         
-        let availability = (try? dom.select("p.in-stock"))?.first() != nil ? Availability.available : Availability.unavailable
+        let availability = (try? dom.select("div.fusion-out-of-stock"))?.first() == nil ? Availability.available : Availability.unavailable
         
-        let categories: [String] = (try? dom.select("div.product-cats").first()?.select("a").compactMap{ try? $0.text() }) ?? []
+        let categories: [String] = []
         
         let url = (try? dom.select("h3.product-title").first()?.select("a").first()?.attr("href")) ?? currentIterationRequestUrl()
         

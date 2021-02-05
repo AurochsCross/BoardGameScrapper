@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct ProductDetailsView: View {
-    let product: Product
+    let product: ScrappedProduct
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading) {
-                Text(product.name)
-                    .font(.largeTitle)
-                
-                if product.availability == .unavailable {
-                    Text("Currently unavailable")
-                        .bold()
-                        .foregroundColor(.red)
+            VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading) {
+                    Text(product.name)
+                        .font(.largeTitle)
+                    
+                    if product.availability == .unavailable {
+                        Text("Currently unavailable")
+                            .bold()
+                            .foregroundColor(.red)
+                    }
                 }
                 
                 HStack(alignment: .bottom) {
@@ -30,6 +32,9 @@ struct ProductDetailsView: View {
                             .foregroundColor(.gray)
                             .strikethrough()
                     }
+                }
+                Link(destination: URL(string: product.url)!) {
+                    Label("Open in store", systemImage: "arrow.up.forward.circle")
                 }
                 Divider()
                 Text("Categories")

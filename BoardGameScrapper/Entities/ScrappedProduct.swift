@@ -8,6 +8,7 @@
 import Foundation
 
 struct ScrappedProduct {
+    let id: String
     let name: String
     let price: Double
     let originalPrice: Double?
@@ -24,6 +25,7 @@ struct ScrappedProduct {
         availability: Availability,
         storeId: String = "NaN",
         url: String) {
+        self.id = "\(storeId)_\(name.lowercased().replacingOccurrences(of: " ", with: "-"))"
         self.name = name
         self.price = price
         self.originalPrice = originalPrice
@@ -50,7 +52,7 @@ extension ScrappedProduct {
     }
 }
 
-enum Availability {
-    case available
-    case unavailable
+enum Availability: String {
+    case available = "available"
+    case unavailable = "unavailable"
 }

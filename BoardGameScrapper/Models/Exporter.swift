@@ -9,7 +9,7 @@ import Foundation
 import AppKit
 
 class Exporter {
-    func export(products: [Product]) {
+    func export(products: [ScrappedProduct]) {
         var textToExport = "Product name; Original value; Current value;\n"
         
         products.forEach { product in

@@ -11,20 +11,50 @@
 		B11EF75325C1681000845B59 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = B11EF75225C1681000845B59 /* SwiftSoup */; };
 		B11EF75625C1681900845B59 /* Scrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EF75525C1681900845B59 /* Scrapper.swift */; };
 		B11EF75A25C1723E00845B59 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EF75925C1723E00845B59 /* ContentViewModel.swift */; };
+		B149C75F25CC3CC3007650DE /* ProcessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149C75E25CC3CC3007650DE /* ProcessState.swift */; };
+		B149C76225CC4288007650DE /* RikisScrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149C76125CC4288007650DE /* RikisScrapper.swift */; };
+		B149C76525CC451C007650DE /* BoardgameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149C76425CC451C007650DE /* BoardgameDetailsView.swift */; };
+		B1512E9925CBFFA900F12D46 /* ScrapingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512E9825CBFFA900F12D46 /* ScrapingView.swift */; };
+		B1512E9D25CC060700F12D46 /* WebScrappersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512E9C25CC060700F12D46 /* WebScrappersManager.swift */; };
+		B1512EA125CC08EB00F12D46 /* AvailableScrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512EA025CC08EB00F12D46 /* AvailableScrappers.swift */; };
+		B1512EA525CC1C4200F12D46 /* DatabaseRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512EA425CC1C4200F12D46 /* DatabaseRetriever.swift */; };
+		B1512EA925CC1CC900F12D46 /* BoardgameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512EA825CC1CC900F12D46 /* BoardgameView.swift */; };
+		B1512EAC25CC1D0C00F12D46 /* BoardgameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512EAB25CC1D0C00F12D46 /* BoardgameViewModel.swift */; };
+		B1512EB025CC1EEF00F12D46 /* Boardgame+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1512EAF25CC1EEF00F12D46 /* Boardgame+UI.swift */; };
 		B1948CC025C1674A0039AA71 /* BoardGameScrapperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1948CBF25C1674A0039AA71 /* BoardGameScrapperApp.swift */; };
 		B1948CC225C1674A0039AA71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1948CC125C1674A0039AA71 /* ContentView.swift */; };
 		B1948CC425C1674E0039AA71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1948CC325C1674E0039AA71 /* Assets.xcassets */; };
 		B1948CC725C1674E0039AA71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1948CC625C1674E0039AA71 /* Preview Assets.xcassets */; };
 		B1AFCCD725CACB76005E0633 /* StaloZaidimaiScrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCD625CACB76005E0633 /* StaloZaidimaiScrapper.swift */; };
-		B1AFCCDC25CACB9E005E0633 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCDB25CACB9E005E0633 /* Product.swift */; };
+		B1AFCCDC25CACB9E005E0633 /* ScrappedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCDB25CACB9E005E0633 /* ScrappedProduct.swift */; };
 		B1AFCCE125CACE6D005E0633 /* ProductUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCE025CACE6D005E0633 /* ProductUtilities.swift */; };
 		B1AFCCE525CAD5A4005E0633 /* ProductDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCE425CAD5A4005E0633 /* ProductDetailsView.swift */; };
+		B1AFCCF025CAF2AB005E0633 /* BoardGameModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCEE25CAF2AA005E0633 /* BoardGameModel.xcdatamodeld */; };
+		B1AFCCF425CAF311005E0633 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCF325CAF311005E0633 /* DatabaseManager.swift */; };
+		B1AFCCF725CAF5F7005E0633 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCF625CAF5F7005E0633 /* AppViewModel.swift */; };
+		B1AFCCFA25CAF612005E0633 /* ScrappingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCF925CAF612005E0633 /* ScrappingManager.swift */; };
+		B1AFCCFF25CAF861005E0633 /* CategoryManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCCFE25CAF861005E0633 /* CategoryManagementView.swift */; };
+		B1AFCD0225CAF875005E0633 /* CategoryManagementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCD0125CAF875005E0633 /* CategoryManagementViewModel.swift */; };
+		B1AFCD0525CAFF1D005E0633 /* DatabaseUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AFCD0425CAFF1D005E0633 /* DatabaseUpdater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B10F878D25C18D0700C8D41A /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
 		B11EF75525C1681900845B59 /* Scrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scrapper.swift; sourceTree = "<group>"; };
 		B11EF75925C1723E00845B59 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		B149C75B25CC2726007650DE /* BoardGameModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BoardGameModel 2.xcdatamodel"; sourceTree = "<group>"; };
+		B149C75E25CC3CC3007650DE /* ProcessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessState.swift; sourceTree = "<group>"; };
+		B149C76125CC4288007650DE /* RikisScrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RikisScrapper.swift; sourceTree = "<group>"; };
+		B149C76425CC451C007650DE /* BoardgameDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardgameDetailsView.swift; sourceTree = "<group>"; };
+		B149C76825CC57CA007650DE /* BoardGameModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BoardGameModel 3.xcdatamodel"; sourceTree = "<group>"; };
+		B149C76A25CC5BB3007650DE /* BoardGameModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BoardGameModel 4.xcdatamodel"; sourceTree = "<group>"; };
+		B1512E9825CBFFA900F12D46 /* ScrapingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingView.swift; sourceTree = "<group>"; };
+		B1512E9C25CC060700F12D46 /* WebScrappersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScrappersManager.swift; sourceTree = "<group>"; };
+		B1512EA025CC08EB00F12D46 /* AvailableScrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableScrappers.swift; sourceTree = "<group>"; };
+		B1512EA425CC1C4200F12D46 /* DatabaseRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRetriever.swift; sourceTree = "<group>"; };
+		B1512EA825CC1CC900F12D46 /* BoardgameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardgameView.swift; sourceTree = "<group>"; };
+		B1512EAB25CC1D0C00F12D46 /* BoardgameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardgameViewModel.swift; sourceTree = "<group>"; };
+		B1512EAF25CC1EEF00F12D46 /* Boardgame+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Boardgame+UI.swift"; sourceTree = "<group>"; };
 		B1948CBC25C1674A0039AA71 /* BoardGameScrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoardGameScrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1948CBF25C1674A0039AA71 /* BoardGameScrapperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardGameScrapperApp.swift; sourceTree = "<group>"; };
 		B1948CC125C1674A0039AA71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,9 +63,16 @@
 		B1948CC825C1674E0039AA71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1948CC925C1674E0039AA71 /* BoardGameScrapper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BoardGameScrapper.entitlements; sourceTree = "<group>"; };
 		B1AFCCD625CACB76005E0633 /* StaloZaidimaiScrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaloZaidimaiScrapper.swift; sourceTree = "<group>"; };
-		B1AFCCDB25CACB9E005E0633 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B1AFCCDB25CACB9E005E0633 /* ScrappedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrappedProduct.swift; sourceTree = "<group>"; };
 		B1AFCCE025CACE6D005E0633 /* ProductUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUtilities.swift; sourceTree = "<group>"; };
 		B1AFCCE425CAD5A4005E0633 /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
+		B1AFCCEF25CAF2AA005E0633 /* BoardGameModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BoardGameModel.xcdatamodel; sourceTree = "<group>"; };
+		B1AFCCF325CAF311005E0633 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		B1AFCCF625CAF5F7005E0633 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		B1AFCCF925CAF612005E0633 /* ScrappingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrappingManager.swift; sourceTree = "<group>"; };
+		B1AFCCFE25CAF861005E0633 /* CategoryManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagementView.swift; sourceTree = "<group>"; };
+		B1AFCD0125CAF875005E0633 /* CategoryManagementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManagementViewModel.swift; sourceTree = "<group>"; };
+		B1AFCD0425CAFF1D005E0633 /* DatabaseUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUpdater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +90,12 @@
 		B11EF74E25C167E400845B59 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1512EA725CC1CBE00F12D46 /* Boardgames */,
+				B1512E9725CBFF9400F12D46 /* Scrapping */,
 				B1948CBF25C1674A0039AA71 /* BoardGameScrapperApp.swift */,
 				B1948CC125C1674A0039AA71 /* ContentView.swift */,
 				B1AFCCE425CAD5A4005E0633 /* ProductDetailsView.swift */,
+				B1AFCCFE25CAF861005E0633 /* CategoryManagementView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -63,9 +103,11 @@
 		B11EF75025C167F200845B59 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B1AFCCF225CAF308005E0633 /* Database */,
 				B1AFCCD525CACB5C005E0633 /* Scrappers */,
 				B11EF75525C1681900845B59 /* Scrapper.swift */,
 				B10F878D25C18D0700C8D41A /* Exporter.swift */,
+				B1AFCCF925CAF612005E0633 /* ScrappingManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -74,8 +116,45 @@
 			isa = PBXGroup;
 			children = (
 				B11EF75925C1723E00845B59 /* ContentViewModel.swift */,
+				B1AFCCF625CAF5F7005E0633 /* AppViewModel.swift */,
+				B1AFCD0125CAF875005E0633 /* CategoryManagementViewModel.swift */,
+				B1512EAB25CC1D0C00F12D46 /* BoardgameViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1512E9725CBFF9400F12D46 /* Scrapping */ = {
+			isa = PBXGroup;
+			children = (
+				B1512E9825CBFFA900F12D46 /* ScrapingView.swift */,
+			);
+			path = Scrapping;
+			sourceTree = "<group>";
+		};
+		B1512E9F25CC08D000F12D46 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B1512EA025CC08EB00F12D46 /* AvailableScrappers.swift */,
+				B149C75E25CC3CC3007650DE /* ProcessState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B1512EA725CC1CBE00F12D46 /* Boardgames */ = {
+			isa = PBXGroup;
+			children = (
+				B1512EA825CC1CC900F12D46 /* BoardgameView.swift */,
+				B149C76425CC451C007650DE /* BoardgameDetailsView.swift */,
+			);
+			path = Boardgames;
+			sourceTree = "<group>";
+		};
+		B1512EAE25CC1EE000F12D46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1512EAF25CC1EEF00F12D46 /* Boardgame+UI.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B1948CB325C1674A0039AA71 = {
@@ -97,15 +176,18 @@
 		B1948CBE25C1674A0039AA71 /* BoardGameScrapper */ = {
 			isa = PBXGroup;
 			children = (
-				B1AFCCDF25CACE61005E0633 /* Utilities */,
-				B1AFCCDA25CACB96005E0633 /* Entities */,
-				B11EF75825C1722D00845B59 /* ViewModels */,
-				B11EF75025C167F200845B59 /* Models */,
-				B11EF74E25C167E400845B59 /* Views */,
 				B1948CC325C1674E0039AA71 /* Assets.xcassets */,
-				B1948CC825C1674E0039AA71 /* Info.plist */,
 				B1948CC925C1674E0039AA71 /* BoardGameScrapper.entitlements */,
+				B1948CC825C1674E0039AA71 /* Info.plist */,
+				B1AFCCED25CAF2AA005E0633 /* Data */,
+				B1512E9F25CC08D000F12D46 /* Enums */,
+				B1AFCCDA25CACB96005E0633 /* Entities */,
+				B1512EAE25CC1EE000F12D46 /* Extensions */,
+				B11EF75025C167F200845B59 /* Models */,
 				B1948CC525C1674E0039AA71 /* Preview Content */,
+				B1AFCCDF25CACE61005E0633 /* Utilities */,
+				B11EF75825C1722D00845B59 /* ViewModels */,
+				B11EF74E25C167E400845B59 /* Views */,
 			);
 			path = BoardGameScrapper;
 			sourceTree = "<group>";
@@ -122,6 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				B1AFCCD625CACB76005E0633 /* StaloZaidimaiScrapper.swift */,
+				B1512E9C25CC060700F12D46 /* WebScrappersManager.swift */,
+				B149C76125CC4288007650DE /* RikisScrapper.swift */,
 			);
 			path = Scrappers;
 			sourceTree = "<group>";
@@ -129,7 +213,7 @@
 		B1AFCCDA25CACB96005E0633 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				B1AFCCDB25CACB9E005E0633 /* Product.swift */,
+				B1AFCCDB25CACB9E005E0633 /* ScrappedProduct.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -140,6 +224,24 @@
 				B1AFCCE025CACE6D005E0633 /* ProductUtilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B1AFCCED25CAF2AA005E0633 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B1AFCCEE25CAF2AA005E0633 /* BoardGameModel.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B1AFCCF225CAF308005E0633 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B1AFCCF325CAF311005E0633 /* DatabaseManager.swift */,
+				B1AFCD0425CAFF1D005E0633 /* DatabaseUpdater.swift */,
+				B1512EA425CC1C4200F12D46 /* DatabaseRetriever.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,14 +320,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				B11EF75A25C1723E00845B59 /* ContentViewModel.swift in Sources */,
+				B1AFCCF425CAF311005E0633 /* DatabaseManager.swift in Sources */,
+				B1AFCD0225CAF875005E0633 /* CategoryManagementViewModel.swift in Sources */,
+				B1512EB025CC1EEF00F12D46 /* Boardgame+UI.swift in Sources */,
+				B1AFCCF725CAF5F7005E0633 /* AppViewModel.swift in Sources */,
+				B149C75F25CC3CC3007650DE /* ProcessState.swift in Sources */,
 				B1948CC225C1674A0039AA71 /* ContentView.swift in Sources */,
+				B1AFCCFA25CAF612005E0633 /* ScrappingManager.swift in Sources */,
 				B10F878E25C18D0700C8D41A /* Exporter.swift in Sources */,
 				B11EF75625C1681900845B59 /* Scrapper.swift in Sources */,
+				B1AFCCFF25CAF861005E0633 /* CategoryManagementView.swift in Sources */,
+				B1AFCCF025CAF2AB005E0633 /* BoardGameModel.xcdatamodeld in Sources */,
+				B1512EA925CC1CC900F12D46 /* BoardgameView.swift in Sources */,
+				B1AFCD0525CAFF1D005E0633 /* DatabaseUpdater.swift in Sources */,
 				B1948CC025C1674A0039AA71 /* BoardGameScrapperApp.swift in Sources */,
 				B1AFCCD725CACB76005E0633 /* StaloZaidimaiScrapper.swift in Sources */,
+				B149C76525CC451C007650DE /* BoardgameDetailsView.swift in Sources */,
 				B1AFCCE125CACE6D005E0633 /* ProductUtilities.swift in Sources */,
-				B1AFCCDC25CACB9E005E0633 /* Product.swift in Sources */,
+				B1512E9925CBFFA900F12D46 /* ScrapingView.swift in Sources */,
+				B1AFCCDC25CACB9E005E0633 /* ScrappedProduct.swift in Sources */,
+				B1512E9D25CC060700F12D46 /* WebScrappersManager.swift in Sources */,
 				B1AFCCE525CAD5A4005E0633 /* ProductDetailsView.swift in Sources */,
+				B1512EA125CC08EB00F12D46 /* AvailableScrappers.swift in Sources */,
+				B149C76225CC4288007650DE /* RikisScrapper.swift in Sources */,
+				B1512EA525CC1C4200F12D46 /* DatabaseRetriever.swift in Sources */,
+				B1512EAC25CC1D0C00F12D46 /* BoardgameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +555,22 @@
 			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B1AFCCEE25CAF2AA005E0633 /* BoardGameModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B149C76A25CC5BB3007650DE /* BoardGameModel 4.xcdatamodel */,
+				B149C76825CC57CA007650DE /* BoardGameModel 3.xcdatamodel */,
+				B149C75B25CC2726007650DE /* BoardGameModel 2.xcdatamodel */,
+				B1AFCCEF25CAF2AA005E0633 /* BoardGameModel.xcdatamodel */,
+			);
+			currentVersion = B149C76A25CC5BB3007650DE /* BoardGameModel 4.xcdatamodel */;
+			path = BoardGameModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B1948CB425C1674A0039AA71 /* Project object */;
 }
